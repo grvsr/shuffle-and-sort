@@ -1,0 +1,149 @@
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --lightblue: #72C3DC;
+    --graydark: #333333;
+    --graylight: #EFEFEF;
+    --blueone: #6F98A8;
+    --bluetwo: #2B8EAD;
+    --grayone: #2F454E;
+    --graytwo: #BFBFBF;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+
+main {
+    display: flex;
+}
+
+#cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.button-group {
+    display: flex;
+    align-items: center;
+}
+
+button {
+    background-color: var(--lightblue);
+    color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0px 5px 0px 0px var(--bluetwo);
+    border:none;
+    padding: 1em;
+    margin: 1em;
+    width: 80%;
+    text-transform: uppercase;
+}
+
+/* For viewing in larger devices like tablets and dektop */
+@media (min-width: 376px) {
+
+    body {
+        background-color: var(--graylight);
+    }
+
+    main {
+        flex-direction: row;
+    }
+
+    .card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 5em;
+        flex: 1 0 30%;
+        color: var(--white);
+    }
+
+    .card-1 {
+        background-color: var(--blueone);
+    }
+    
+    .card-2 {
+        background-color: var(--bluetwo);
+    }
+    
+    .card-3 {
+        background-color: var(--grayone);
+    }
+    
+    .card-0 {
+        background-color: var(--graytwo);
+    }
+
+    .button-group {
+        margin-left: 2em;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    button {
+        padding: 1em 3em;
+    }
+}
+
+/* For viewing in mobile devices */
+@media (max-width: 375px) {
+
+    body {
+        background-color: var(--white);
+    }
+
+    header {
+        background-color: var(--graydark);
+        color: var(--white);
+        width: 100%;
+        text-align: center;
+    }
+    main {
+        flex-direction: column-reverse;
+    }
+    #cards-container {
+        flex-direction: column;
+    }
+
+    .card {
+        font-size: 2em;
+        color: var(--black);
+        width: 100%;
+        background-color: var(--graylight);
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    .card-1 {
+        border-left: 10px solid var(--blueone);
+    }
+    
+    .card-2 {
+        border-left: 10px solid var(--bluetwo);
+    }
+    
+    .card-3 {
+        border-left: 10px solid var(--grayone);
+    }
+    
+    .card-0 {
+        border-left: 10px solid var(--graytwo);
+    }
+
+    button {
+        padding: 1em 3.5em;
+    }
+}
